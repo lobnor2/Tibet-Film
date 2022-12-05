@@ -8,15 +8,15 @@ import {
   NavBar,
   Profile,
 } from "./components/index";
-// / -> root -> all movies
-// /movie1 -> movie information -> more
+import useStyles from "./components/styles";
 
 function App() {
+  const classes = useStyles();
   return (
     <div>
       <CssBaseline />
+      <NavBar />
       <main>
-        <NavBar />
         <Routes>
           <Route path="/" element={<Movies />} />
           <Route path="/movie/:id" element={<MovieInformation />} />
