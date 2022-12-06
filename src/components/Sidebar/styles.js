@@ -4,8 +4,8 @@ export default makeStyles((theme) => ({
   imageLink: {
     display: "flex",
     justifyContent: "center",
-    padding: "10% 0",
-    // border: "1px solid green",
+    padding: "20px 0",
+    border: "1px solid green",
   },
   image: {
     width: "100%",
