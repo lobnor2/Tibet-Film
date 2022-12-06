@@ -7,6 +7,7 @@ import {
   Movies,
   NavBar,
   Profile,
+  Errorpage,
 } from "./components/index";
 import useStyles from "./components/styles";
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/movie/:id" element={<MovieInformation />} />
           <Route path="/actors/:id" element={<Actors />} />
           <Route path="/profile/:id" element={<Profile />} />
+          <Route path="*" element={<Errorpage />} />
         </Routes>
       </main>
       {/* <h1>Hello World Tibet Film</h1> */}
