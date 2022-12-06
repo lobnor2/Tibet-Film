@@ -5,6 +5,7 @@ export default makeStyles(() => ({
     display: "flex",
     height: "100%",
     border: "2px solid green",
+    padding: "200px",
   },
   content: {
     flexGrow: 1,
