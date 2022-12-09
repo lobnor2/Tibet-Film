@@ -29,6 +29,7 @@ const NavBar = () => {
     <>
       <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
+          {/* for mobile show hamburger icon button  */}
           {isMobile && (
             <IconButton
               color="inherit"
@@ -40,11 +41,17 @@ const NavBar = () => {
               <Menu />
             </IconButton>
           )}
+
+          {/* light and dark icon button  */}
           <IconButton sx={{ ml: 1 }} onClick={() => {}} color="inherit">
             {theme.palette.mode === "dark" ? <Brightness7 /> : <Brightness4 />}
           </IconButton>
+
+          {/* for device larger than 600px, show Search after light and dark icon button  */}
           {!isMobile && "Search..."}
+
           <div>
+            {/* for unauthenticated user show login button and for authenticated user show my movies */}
             {!isAuthenticated ? (
               <Button color="inherit" onClick={() => {}}>
                 Login &nbsp; <AccountCircle />
@@ -69,6 +76,8 @@ const NavBar = () => {
           {isMobile && "Search..."}
         </Toolbar>
       </AppBar>
+
+      {/* for sidebar  */}
       <div>
         <nav className={classes.drawer}>
           {isMobile ? (

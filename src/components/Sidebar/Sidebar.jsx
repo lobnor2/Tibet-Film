@@ -45,6 +45,38 @@ const demoCategories = [
     label: "Animation",
     value: "animation",
   },
+  {
+    label: "Comedy",
+    value: "comedy",
+  },
+  {
+    label: "Action",
+    value: "action",
+  },
+  {
+    label: "Horror",
+    value: "horror",
+  },
+  {
+    label: "Animation",
+    value: "animation",
+  },
+  {
+    label: "Comedy",
+    value: "comedy",
+  },
+  {
+    label: "Action",
+    value: "action",
+  },
+  {
+    label: "Horror",
+    value: "horror",
+  },
+  {
+    label: "Animation",
+    value: "animation",
+  },
 ];
 // const demoCategories = ["Comedy", "Action", "Horror", "Animation"];
 

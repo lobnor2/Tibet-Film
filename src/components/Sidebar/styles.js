@@ -5,7 +5,7 @@ export default makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     padding: "20px 0",
-    border: "1px solid green",
+    // border: "1px solid green",
   },
   image: {
     width: "100%",
