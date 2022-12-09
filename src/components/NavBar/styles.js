@@ -7,7 +7,7 @@ export default makeStyles((theme) => ({
     height: "80px",
     display: "flex",
     justifyContent: "space-between",
-    marginLeft: "240px",
+    marginLeft: "250px",
     [theme.breakpoints.down("sm")]: {
       marginLeft: 0,
       flexWrap: "wrap",

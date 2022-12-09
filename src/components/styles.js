@@ -9,7 +9,7 @@ export default makeStyles((theme) => ({
     display: "flex",
     height: "100%",
     border: "1px solid green",
-    marginLeft: "210px",
+    marginLeft: "270px",
     marginRight: "5px",
     [theme.breakpoints.down("sm")]: {
       marginLeft: 5,
@@ -26,6 +26,6 @@ export default makeStyles((theme) => ({
   toolbar: {
     height: "150px",
 
-    // border: "1px solid red",
+    border: "1px solid red",
   },
 }));

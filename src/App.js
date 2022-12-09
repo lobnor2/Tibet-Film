@@ -28,7 +28,6 @@ function App() {
           </Routes>
         </div>
       </main>
-      {/* <h1>Hello World Tibet Film</h1> */}
     </div>
   );
 }

@@ -8,9 +8,9 @@ export default makeStyles((theme) => ({
     // border: "1px solid green",
   },
   image: {
-    width: "100%",
+    width: "90%",
     // border: "1px solid red",
-    margin: "0 15px",
+    // margin: "0 15px",
   },
   links: {
     color: theme.palette.text.primary,
