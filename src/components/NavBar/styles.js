@@ -1,6 +1,6 @@
 import { makeStyles } from "@mui/styles";
 
-const drawerWidth = "240px";
+const drawerWidth = "100px";
 export default makeStyles((theme) => ({
   toolbar: {
     // border: "2px solid red",
@@ -22,6 +22,7 @@ export default makeStyles((theme) => ({
     drawer: {
       [theme.breakpoints.up("sm")]: {
         width: drawerWidth,
+        // width: "100px",
         flexShrink: 0,
       },
     },
