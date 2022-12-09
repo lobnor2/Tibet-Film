@@ -5,7 +5,7 @@ const page = 1;
 
 export const tmdbApi = createApi({
   reducerPath: "tmdbApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "https://api.themoviedb.org/3" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://api.themoviedb.org/3/" }),
   endpoints: (builder) => ({
     // Get movies by [type]
     getMovies: builder.query({

@@ -46,36 +46,28 @@ const demoCategories = [
     value: "animation",
   },
   {
-    label: "Comedy",
-    value: "comedy",
+    label: "Drama",
+    value: "drama",
   },
   {
-    label: "Action",
-    value: "action",
+    label: "Fantasy",
+    value: "fantasy",
   },
   {
-    label: "Horror",
-    value: "horror",
+    label: "Mystery",
+    value: "mystery",
   },
   {
-    label: "Animation",
-    value: "animation",
+    label: "Romance",
+    value: "romance",
   },
   {
-    label: "Comedy",
-    value: "comedy",
+    label: "Thriller",
+    value: "thriller",
   },
   {
-    label: "Action",
-    value: "action",
-  },
-  {
-    label: "Horror",
-    value: "horror",
-  },
-  {
-    label: "Animation",
-    value: "animation",
+    label: "Western",
+    value: "western",
   },
 ];
 // const demoCategories = ["Comedy", "Action", "Horror", "Animation"];
