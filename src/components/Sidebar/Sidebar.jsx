@@ -12,9 +12,9 @@ import {
 import { Link } from "react-router-dom";
 import { useTheme } from "@mui/styles";
 import useStyles from "./styles.js";
-import Logo from "../../../src/image/logo200.png";
 import { useGetGenresQuery } from "../../services/TMDB.js";
-
+import Logo from "../../assets/genres/adventure.png";
+import genreIcons from "../../assets/genres";
 const categories = [
   {
     label: "Popular",
@@ -59,13 +59,13 @@ const Sidebar = ({ setMobileOpen }) => {
         {categories.map(({ label, value }) => (
           <Link key={value} className={classes.links} to="/">
             <ListItem onClick={() => {}} button>
-              {/* <ListItemIcon>
-                  <img
-                    src={redLogo}
-                    className={classes.genreImages}
-                    height={30}
-                  />
-                </ListItemIcon> */}
+              <ListItemIcon>
+                <img
+                  src={genreIcons[label.toLowerCase()]}
+                  className={classes.genreImages}
+                  height={25}
+                />
+              </ListItemIcon>
               <ListItemText primary={label} />
             </ListItem>
           </Link>
@@ -83,13 +83,13 @@ const Sidebar = ({ setMobileOpen }) => {
           data.genres.map(({ name, id }) => (
             <Link key={name} className={classes.links} to="/">
               <ListItem onClick={() => {}} button>
-                {/* <ListItemIcon>
+                <ListItemIcon>
                   <img
-                    src={redLogo}
+                    src={genreIcons[name.toLowerCase()]}
                     className={classes.genreImages}
                     height={30}
                   />
-                </ListItemIcon> */}
+                </ListItemIcon>
                 <ListItemText primary={name} />
               </ListItem>
             </Link>
