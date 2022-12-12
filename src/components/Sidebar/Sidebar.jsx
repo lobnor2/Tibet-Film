@@ -15,6 +15,8 @@ import useStyles from "./styles.js";
 import { useGetGenresQuery } from "../../services/TMDB.js";
 import Logo from "../../assets/genres/adventure.png";
 import genreIcons from "../../assets/genres";
+import { useDispatch, useSelector } from "react-redux";
+import { selectGenreOrCategory } from "../../features/currentGenreOrCategory";
 const categories = [
   {
     label: "Popular",
@@ -41,7 +43,9 @@ const Sidebar = ({ setMobileOpen }) => {
   const classes = useStyles();
   const theme = useTheme();
   const { data, isFetching } = useGetGenresQuery();
-  console.log(data);
+  const dispatch = useDispatch();
+
+  // console.log(data);
   return (
     <>
       {/* tibet film logo */}
@@ -58,7 +62,10 @@ const Sidebar = ({ setMobileOpen }) => {
 
         {categories.map(({ label, value }) => (
           <Link key={value} className={classes.links} to="/">
-            <ListItem onClick={() => {}} button>
+            <ListItem
+              onClick={() => dispatch(selectGenreOrCategory(value))}
+              button
+            >
               <ListItemIcon>
                 <img
                   src={genreIcons[label.toLowerCase()]}
@@ -82,7 +89,10 @@ const Sidebar = ({ setMobileOpen }) => {
         ) : (
           data.genres.map(({ name, id }) => (
             <Link key={name} className={classes.links} to="/">
-              <ListItem onClick={() => {}} button>
+              <ListItem
+                onClick={() => dispatch(selectGenreOrCategory(id))}
+                button
+              >
                 <ListItemIcon>
                   <img
                     src={genreIcons[name.toLowerCase()]}

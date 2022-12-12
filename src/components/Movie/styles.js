@@ -3,16 +3,24 @@ import { makeStyles } from "@mui/styles";
 export default makeStyles((theme) => ({
   movie: {
     padding: "10px",
+    // border: "1px solid red",
+    width: "300px",
+    // margin: "5px",
   },
   title: {
     color: theme.palette.text.primary,
     textOverflow: "ellipsis",
-    width: "230px",
+    width: "250px",
+
     whiteSpace: "nowrap",
     overflow: "hidden",
     marginTop: "10px",
     marginBottom: 0,
     textAlign: "center",
+    // fontSize: "40px",
+    // [theme.breakpoints.down("sm")]: {
+    //   fontSize: "50px",
+    // },
     // textDecoration: "none",
     // listStyle: "none",
   },
@@ -32,14 +40,13 @@ export default makeStyles((theme) => ({
   },
   image: {
     borderRadius: "15px",
-    height: "300px",
-    marginBottom: "10px",
-    // boxShadow: "3px 9px 35px -6px rgba(0,0,0,0.82)",
+    height: "350px",
+    marginBottom: "5px",
 
     [theme.breakpoints.down("sm")]: {
-      height: "500px",
+      height: "400px",
       width: "90%",
-      marginBottom: "20px",
+      marginBottom: "5px",
     },
     "&:hover": {
       transform: "scale(1.05)",
