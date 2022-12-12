@@ -7,8 +7,8 @@ export default makeStyles((theme) => ({
 
   root: {
     display: "flex",
-    height: "100%",
-    border: "1px solid green",
+    height: "auto",
+    // border: "1px solid green",
     marginLeft: "220px",
     marginRight: "5px",
     [theme.breakpoints.down("sm")]: {
@@ -24,8 +24,8 @@ export default makeStyles((theme) => ({
     // border: "1px solid blue",
   },
   toolbar: {
-    height: "150px",
+    height: "auto",
 
-    border: "1px solid red",
+    // border: "1px solid red",
   },
 }));

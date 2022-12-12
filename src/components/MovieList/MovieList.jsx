@@ -11,7 +11,6 @@ const MovieList = ({ movies }) => {
       {movies.results.map((movie, i) => (
         <Movie key={i} movie={movie} i={i} />
       ))}
-      MovieList
     </Grid>
   );
 };
