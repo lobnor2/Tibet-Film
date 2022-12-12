@@ -16,7 +16,7 @@ const Movies = () => {
   // console.log(data);
   if (isFetching) {
     return (
-      <Box display="flex" justifyContent="center">
+      <Box sx={{ display: "flex", justifyContent: "center" }}>
         <CircularProgress size="4rem" />
       </Box>
     );

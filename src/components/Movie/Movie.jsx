@@ -2,11 +2,13 @@ import React from "react";
 import { Typography, Grid, Grow, Tooltip, Rating } from "@mui/material";
 import { Link } from "react-router-dom";
 import useStyles from "./styles";
+import { useMediaQuery } from "@mui/material";
 
 const Movie = ({ movie, i }) => {
+  const isMobile = useMediaQuery("(max-Width:600px)");
   const classes = useStyles();
   return (
-    <Grid item sx={12} sm={12} md={4} lg={3} xl={2} className={classes.movie}>
+    <Grid item sx={6} sm={6} md={4} lg={3} xl={2} className={classes.movie}>
       <Grow in key={i} timeout={(i + 1) * 250}>
         <Link className={classes.links} to={`movie/${movie.id}`}>
           <img
@@ -18,7 +20,16 @@ const Movie = ({ movie, i }) => {
                 : "https://www.fillmurray.com/200/300"
             }
           />
-          <Typography className={classes.title}>{movie.title}</Typography>
+          {isMobile ? (
+            <Typography className={classes.title} variant="body2">
+              {movie.title}
+            </Typography>
+          ) : (
+            <Typography className={classes.title} variant="h6">
+              {movie.title}
+            </Typography>
+          )}
+
           <Tooltip disableTouchListener title={`${movie.vote_average} / 10`}>
             <div>
               <Rating readOnly value={movie.vote_average / 2} precision={0.1} />

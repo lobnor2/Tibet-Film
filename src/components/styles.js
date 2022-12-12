@@ -12,8 +12,8 @@ export default makeStyles((theme) => ({
     marginLeft: "220px",
     marginRight: "5px",
     [theme.breakpoints.down("sm")]: {
-      marginLeft: 5,
-      marginRight: 5,
+      marginLeft: 2,
+      marginRight: 2,
       // flex: 1,
     },
     marginTop: "82px",
@@ -21,6 +21,10 @@ export default makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     padding: "1.2em",
+    [theme.breakpoints.down("sm")]: {
+      padding: 0,
+      marginTop: 5,
+    },
     // border: "1px solid blue",
   },
   toolbar: {

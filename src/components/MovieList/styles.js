@@ -7,7 +7,7 @@ export default makeStyles((theme) => ({
     justifyContent: "space-between",
     overflow: "auto",
     [theme.breakpoints.down("sm")]: {
-      justifyContent: "center",
+      justifyContent: "space-evenly",
     },
   },
 }));
