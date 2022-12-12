@@ -1,3 +1,7 @@
-import { makeStyles } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
 
-export default makeStyles(() => ({}));
+export default makeStyles(() => ({
+  movie: {
+    padding: "10px",
+  },
+}));
