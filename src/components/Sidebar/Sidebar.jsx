@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import { useTheme } from "@mui/styles";
 import useStyles from "./styles.js";
 import Logo from "../../../src/image/logo200.png";
+import { useGetGenresQuery } from "../../services/TMDB.js";
 
 const categories = [
   {
@@ -28,48 +29,7 @@ const categories = [
     value: "upcoming",
   },
 ];
-const demoCategories = [
-  {
-    label: "Comedy",
-    value: "comedy",
-  },
-  {
-    label: "Action",
-    value: "action",
-  },
-  {
-    label: "Horror",
-    value: "horror",
-  },
-  {
-    label: "Animation",
-    value: "animation",
-  },
-  {
-    label: "Drama",
-    value: "drama",
-  },
-  {
-    label: "Fantasy",
-    value: "fantasy",
-  },
-  {
-    label: "Mystery",
-    value: "mystery",
-  },
-  {
-    label: "Romance",
-    value: "romance",
-  },
-  {
-    label: "Thriller",
-    value: "thriller",
-  },
-  {
-    label: "Western",
-    value: "western",
-  },
-];
+
 // const demoCategories = ["Comedy", "Action", "Horror", "Animation"];
 
 const redLogo =
@@ -80,6 +40,8 @@ const blueLogo =
 const Sidebar = ({ setMobileOpen }) => {
   const classes = useStyles();
   const theme = useTheme();
+  const { data, isFetching } = useGetGenresQuery();
+  console.log(data);
   return (
     <>
       {/* tibet film logo */}
@@ -113,20 +75,26 @@ const Sidebar = ({ setMobileOpen }) => {
       <List>
         <ListSubheader> Genres</ListSubheader>
 
-        {demoCategories.map(({ label, value }) => (
-          <Link key={value} className={classes.links} to="/">
-            <ListItem onClick={() => {}} button>
-              {/* <ListItemIcon>
+        {isFetching ? (
+          <Box display="flex" justifyContent="center">
+            <CircularProgress />
+          </Box>
+        ) : (
+          data.genres.map(({ name, id }) => (
+            <Link key={name} className={classes.links} to="/">
+              <ListItem onClick={() => {}} button>
+                {/* <ListItemIcon>
                   <img
                     src={redLogo}
                     className={classes.genreImages}
                     height={30}
                   />
                 </ListItemIcon> */}
-              <ListItemText primary={label} />
-            </ListItem>
-          </Link>
-        ))}
+                <ListItemText primary={name} />
+              </ListItem>
+            </Link>
+          ))
+        )}
       </List>
     </>
   );
