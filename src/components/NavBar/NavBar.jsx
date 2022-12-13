@@ -17,7 +17,7 @@ import {
 import { Link } from "react-router-dom";
 import useStyles from "./styles.js";
 import { useTheme } from "@mui/material/styles";
-import { Sidebar } from "../index";
+import { Sidebar, Search } from "../index";
 
 const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -48,7 +48,7 @@ const NavBar = () => {
           </IconButton>
 
           {/* for device larger than 600px, show Search after light and dark icon button  */}
-          {!isMobile && "Search..."}
+          {!isMobile && <Search />}
 
           <div>
             {/* for unauthenticated user show login button and for authenticated user show my movies */}
@@ -73,7 +73,7 @@ const NavBar = () => {
               </Button>
             )}
           </div>
-          {isMobile && "Search..."}
+          {isMobile && <Search />}
         </Toolbar>
       </AppBar>
 
