@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   AppBar,
   Toolbar,
@@ -18,13 +18,18 @@ import { Link } from "react-router-dom";
 import useStyles from "./styles.js";
 import { useTheme } from "@mui/material/styles";
 import { Sidebar, Search } from "../index";
-
+import { fetchToken } from "../../utils";
 const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const classes = useStyles();
   const isMobile = useMediaQuery("(max-Width:600px)");
   const theme = useTheme();
-  const isAuthenticated = true;
+  const isAuthenticated = false;
+
+  const token = localStorage.getItem("session_id");
+
+  useEffect(() => {}, [token]);
+
   return (
     <>
       <AppBar position="fixed">
@@ -49,11 +54,12 @@ const NavBar = () => {
 
           {/* for device larger than 600px, show Search after light and dark icon button  */}
           {!isMobile && <Search />}
+          {isMobile && <Search />}
 
           <div>
             {/* for unauthenticated user show login button and for authenticated user show my movies */}
             {!isAuthenticated ? (
-              <Button color="inherit" onClick={() => {}}>
+              <Button color="inherit" onClick={fetchToken}>
                 Login &nbsp; <AccountCircle />
               </Button>
             ) : (
@@ -73,7 +79,6 @@ const NavBar = () => {
               </Button>
             )}
           </div>
-          {isMobile && <Search />}
         </Toolbar>
       </AppBar>
 
