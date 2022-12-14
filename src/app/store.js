@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { tmdbApi } from "../services/TMDB";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import genreOrCategoryReducer from "../features/currentGenreOrCategory";
+import userReducer from "../features/auth";
 
 export const store = configureStore({
   // export default configureStore({
@@ -9,6 +10,7 @@ export const store = configureStore({
     // add the generated reducer as a specific top level slice
     [tmdbApi.reducerPath]: tmdbApi.reducer,
     currentGenreOrCategory: genreOrCategoryReducer,
+    user: userReducer,
   },
 
   //adding the api middleware enables caching, invalidation, polling,
