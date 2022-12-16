@@ -13,6 +13,7 @@ const Movies = () => {
   );
   const { data, error, isFetching } = useGetMoviesQuery({
     genreIdOrCategoryName,
+    page,
     searchQuery,
   });
   // console.log(data);
@@ -39,7 +40,7 @@ const Movies = () => {
   return (
     <div>
       <MovieList movies={data} />
-      <Pagination page={page} setPage={setPage} totalpages={data.total_pages} />
+      <Pagination page={page} setPage={setPage} totalPages={data.total_pages} />
     </div>
   );
 };
