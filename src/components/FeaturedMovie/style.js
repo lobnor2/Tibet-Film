@@ -7,6 +7,12 @@ export default makeStyles((theme) => ({
     justifyContent: "center",
     height: "490px",
     textDecoration: "none",
+    // padding: "30px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "12px",
+      marginTop: "-20px",
+      marginBottom: "-10px",
+    },
   },
   card: {
     width: "100%",
