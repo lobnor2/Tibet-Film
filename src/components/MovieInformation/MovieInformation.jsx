@@ -46,7 +46,7 @@ const MovieInformation = () => {
       list: "/recommendations",
       movie_id: id,
     });
-  // console.log(data);
+  console.log(data);
 
   const isMovieFavorited = true;
   const isMovieWatchlisted = true;
@@ -127,6 +127,11 @@ const MovieInformation = () => {
             {data?.spoken_languages.length > 0
               ? `/ ${data?.spoken_languages[0].english_name} `
               : ""}
+          </Typography>
+        </Grid>
+        <Grid>
+          <Typography align="center" gutterBottom>
+            Release Date : {data?.release_date}
           </Typography>
         </Grid>
         <Grid item className={classes.genresContainer}>
