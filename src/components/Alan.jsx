@@ -21,6 +21,12 @@ const useAlan = () => {
           if (foundGenre) {
             navigate("/");
             dispatch(selectGenreOrCategory(foundGenre.id));
+          } else {
+            const category = genreOrCategory.startsWith("top")
+              ? "top_rated"
+              : genreOrCategory;
+            navigate("/");
+            dispatch(selectGenreOrCategory(category));
           }
         } else if (command === "changeMode") {
           if (mode === "light") {
