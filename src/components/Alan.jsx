@@ -2,7 +2,10 @@ import React, { useContext, useEffect } from "react";
 import alanBtn from "@alan-ai/alan-sdk-web";
 import { ColorModeContext } from "../utils/ToggleColorMode";
 import { fetchToken } from "../utils";
-import { selectGenreOrCategory } from "../features/currentGenreOrCategory";
+import {
+  searchMovie,
+  selectGenreOrCategory,
+} from "../features/currentGenreOrCategory";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
@@ -13,7 +16,7 @@ const useAlan = () => {
   useEffect(() => {
     alanBtn({
       key: "dd657cf801cd59dc48895e1da0e0aedf2e956eca572e1d8b807a3e2338fdd0dc/stage",
-      onCommand: ({ command, mode, genres, genreOrCategory }) => {
+      onCommand: ({ command, mode, genres, genreOrCategory, query }) => {
         if (command === "chooseGenre") {
           const foundGenre = genres.find(
             (g) => g.name.toLowerCase() === genreOrCategory.toLowerCase()
@@ -40,6 +43,8 @@ const useAlan = () => {
           localStorage.clear(); //will clear the local Storage
           navigate("/");
           //   window.location.href = "/";
+        } else if (command === "search") {
+          dispatch(searchMovie(query));
         }
       },
     });
