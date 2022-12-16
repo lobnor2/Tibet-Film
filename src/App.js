@@ -10,9 +10,13 @@ import {
   Errorpage,
 } from "./components/index";
 import useStyles from "./components/styles";
+import useAlan from "./components/Alan";
+import { useRef } from "react";
 
 function App() {
   const classes = useStyles();
+  const alanBtnContainer = useRef();
+  useAlan();
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -29,6 +33,7 @@ function App() {
           </Routes>
         </div>
       </main>
+      <div ref={alanBtnContainer} />
     </div>
   );
 }
