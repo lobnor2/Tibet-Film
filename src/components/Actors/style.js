@@ -16,6 +16,7 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       maxWidth: "100%",
       height: "400px",
+      marginLeft: "70px",
     },
   },
 }));

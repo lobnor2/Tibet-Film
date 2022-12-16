@@ -63,6 +63,7 @@ const Profile = () => {
         // size="small"
         onClick={logout}
         className={classes.logoutButton}
+        sx={{ mb: "40px" }}
       >
         Logout &nbsp; <ExitToApp />
       </Button>
