@@ -1,7 +1,7 @@
 
 # FilmPire
 
-Filmpire is an 
+Filmpire is place where you can get all the movies you love. It is available in both dark and light theme and it is responsive in both mobile and desktop. You can control it by Ai voice. 
 
 ## Live Demo
 
@@ -51,12 +51,11 @@ Start the server
 
 **Client:** React, Redux, Mui, Axios, 
 
-**Server:** Node, Express
 
 
 ## Feedback
 
-If you have any feedback, please reach out to us at lnorbu151@gmail.com
+If you have any feedback, please reach out to lnorbu151@gmail.com
 
 
 
