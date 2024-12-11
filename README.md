@@ -5,7 +5,7 @@ Filmpire is place where you can get all the movies you love. It is available in 
 
 ## Live Demo
 
-https://filmpire-lobnor.netlify.com/
+https://lobnor-film.vercel.app/
 
 
 ## Run Locally
