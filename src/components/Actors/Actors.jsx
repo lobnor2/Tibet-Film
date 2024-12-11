@@ -54,10 +54,6 @@ const Actors = () => {
 
   return (
     <>
-      {/* Actors {id}
-      {data.name}
-      {data.birthday}
-      {data.biography} */}
       <Grid container spacing={3}>
         <Grid item lg={5} xl={4} className={classes.imagegrid}>
           <img

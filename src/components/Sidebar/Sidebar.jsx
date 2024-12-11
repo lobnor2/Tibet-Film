@@ -32,8 +32,6 @@ const categories = [
   },
 ];
 
-// const demoCategories = ["Comedy", "Action", "Horror", "Animation"];
-
 const redLogo =
   "https://fontmeme.com/permalink/210930/6854ae5c7f76597cf8680e48a2c8a50a.png";
 const blueLogo =
@@ -51,10 +49,8 @@ const Sidebar = ({ setMobileOpen }) => {
     setMobileOpen(false);
   }, [genreIdOrCategoryName]);
 
-  // console.log(data);
   return (
     <>
-      {/* tibet film logo */}
       <Link to="/" className={classes.imageLink}>
         <img
           className={classes.image}

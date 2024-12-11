@@ -17,7 +17,6 @@ const Movies = () => {
     page,
     searchQuery,
   });
-  // console.log(data);
   if (isFetching) {
     return (
       <Box display="flex" justifyContent="center" alignItems="center">

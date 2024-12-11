@@ -2,11 +2,9 @@ import { makeStyles } from "@mui/styles";
 
 export default makeStyles((theme) => ({
   movie: {
-    // padding: "10px",
     width: "300px",
     [theme.breakpoints.down("sm")]: {
       width: "190px",
-      // border: "1px solid red",
     },
   },
   title: {
@@ -19,13 +17,10 @@ export default makeStyles((theme) => ({
     marginTop: "10px",
     marginBottom: 0,
     textAlign: "center",
-    // fontSize: "40px",
     [theme.breakpoints.down("sm")]: {
       width: "190px",
       overflow: "hidden",
     },
-    // textDecoration: "none",
-    // listStyle: "none",
   },
   links: {
     alignItems: "center",
@@ -48,9 +43,10 @@ export default makeStyles((theme) => ({
     height: "350px",
     marginBottom: "5px",
     marginTop: "20px",
+    transition: "transform 0.1s ease-in-out",
 
     "&:hover": {
-      transform: "scale(1.05)",
+      transform: "scale(1.02)",
     },
     [theme.breakpoints.down("sm")]: {
       height: "270px",
